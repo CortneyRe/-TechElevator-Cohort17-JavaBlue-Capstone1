@@ -43,8 +43,9 @@ import java.math.BigDecimal;
 
         public abstract String itemSound();
 
-    //public String consume() {
-        //return itemSound();
+     public String dispensing() {
+         return itemSound();
+     }
 
     public BigDecimal getItemPrice() {
             return itemPrice;
