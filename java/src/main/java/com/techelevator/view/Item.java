@@ -11,7 +11,7 @@ import java.math.BigDecimal;
         private BigDecimal itemPrice;
 
 
-    public Item(String itemName, String itemType, BigDecimal itemPrice) {
+    public Item(String itemName, BigDecimal itemPrice) {
             this.itemName = itemName;
             //this.itemType = itemType;
             this.itemPrice = itemPrice;
@@ -19,9 +19,7 @@ import java.math.BigDecimal;
 
     }
 
-     public Item() {
 
-     }
 
      public void setItemName(String itemName) {
          this.itemName = itemName;
@@ -45,8 +43,9 @@ import java.math.BigDecimal;
 
         public abstract String itemSound();
 
-    //public String consume() {
-        //return itemSound();
+     public String dispensing() {
+         return itemSound();
+     }
 
     public BigDecimal getItemPrice() {
             return itemPrice;

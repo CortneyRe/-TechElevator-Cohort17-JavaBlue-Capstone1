@@ -8,7 +8,7 @@ public class GumItem extends Item{
 //    }
 
     public GumItem(String itemName, BigDecimal itemPrice) {
-        super();
+        super(itemName, itemPrice);
     }
 
     @Override
