@@ -1,7 +1,9 @@
 package com.techelevator.view;
 
+import com.techelevator.LackingFundsException;
+import com.techelevator.NotInStockException;
+
 import java.io.FileNotFoundException;
-import java.lang.invoke.LambdaConversionException;
 import java.math.BigDecimal;
 import java.util.Map;
 import java.util.Stack;
@@ -50,12 +52,28 @@ public class VendingMachine {
     }
 
     public String makeChange() {
-        int pennyCounter = 0;
-        int nickelCounter = 0;
-        int dimeCounter = 0;
         int quarterCounter = 0;
+        int dimeCounter = 0;
+        int nickelCounter = 0;
+
         String expectedChangeToUser = "";
 
+        while (userBalance.compareTo(new BigDecimal("0")) > 0) {
+            if (userBalance.compareTo(new BigDecimal("0.25")) >= 0) {
+                userBalance = userBalance.subtract(new BigDecimal("0.25"));
+                quarterCounter++;
+            } else if (userBalance.compareTo(new BigDecimal("0.10")) >= 0) {
+                userBalance = userBalance.subtract(new BigDecimal("0.10"));
+                dimeCounter++;
+            }else if (userBalance.compareTo(new BigDecimal("0.05")) >= 0) {
+                userBalance = userBalance.subtract(new BigDecimal("0.05"));
+                nickelCounter++;
+            }
+        }
+        expectedChangeToUser = ( "\n" + quarterCounter + "quarter(s), " + dimeCounter + "dime(s), and " + nickelCounter
+                + "nickel(s) " + "is your change.\n" + "Your balance is now $" + userBalance +
+                "\n ☺☺☺ Happy Snacking☺☺☺");
 
+        return expectedChangeToUser;
     }
 }
