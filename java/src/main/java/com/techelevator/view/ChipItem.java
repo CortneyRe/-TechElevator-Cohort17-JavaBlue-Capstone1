@@ -8,7 +8,7 @@ public class ChipItem extends Item{
     //}
 
     public ChipItem(String itemName, BigDecimal itemPrice) {
-        super();
+        super(itemName, itemPrice);
     }
 
     @Override

@@ -8,7 +8,7 @@ public class DrinkItem extends Item{
 //    }
 
     public DrinkItem(String itemName, BigDecimal itemPrice) {
-        super();
+        super(itemName, itemPrice);
     }
 
     @Override
