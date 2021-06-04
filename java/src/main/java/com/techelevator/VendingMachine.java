@@ -1,7 +1,4 @@
-package com.techelevator.view;
-
-import com.techelevator.LackingFundsException;
-import com.techelevator.NotInStockException;
+package com.techelevator;
 
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
@@ -39,16 +36,16 @@ public class VendingMachine {
 
 
     //
-    public void addMoreFunds(BigDecimal userSubmittedFunds) {
-        this.userBalance = userBalance.add(userSubmittedFunds);
-    }
-
     public BigDecimal getUserBalance() {
         return userBalance;
     }
 
     public Map<String, Stack<Item>> getVendingMachineInventory() {
         return vendingMachineInventory;
+    }
+
+    public void addMoreFunds(BigDecimal userSubmittedFunds) {
+        this.userBalance = userBalance.add(userSubmittedFunds);
     }
 
     public String makeChange() {
