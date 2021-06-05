@@ -20,6 +20,11 @@ import java.math.BigDecimal;
 
 
     //
+//    @Overide //to delete if not used
+    public String toString() {
+        return itemName + " >>> " + itemPrice;
+    }
+
     public String getItemName() {
      return itemName;
  }

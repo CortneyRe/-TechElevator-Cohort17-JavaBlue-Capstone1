@@ -42,6 +42,7 @@ public class VendingMachineCLI {
 				int counter = 0;
 
 				for(String slotName : Vend1000.getVendingMachineInventory().keySet()) {
+
 					System.out.println(Vend1000.getVendingMachineInventory().keySet().toArray()[counter]);
 					System.out.println(Vend1000.getVendingMachineInventory().get(slotName).toArray()[0]);
 					System.out.println("Number of items left: " + Vend1000.getVendingMachineInventory().get(slotName).size());
@@ -58,7 +59,7 @@ public class VendingMachineCLI {
 					if(choice.equals(DISPLAY_MENU_OPTION_BILL_FEED)) {
 						BigDecimal amountFromUser = vendingMachineMenu.getAmountFromUserInput();
 
-						while(amountFromUser!= null) {
+						while(amountFromUser != null) {
 							Vend1000.addMoreFunds(amountFromUser);
 							System.out.println("Your balance is: $ " + Vend1000.getUserBalance());
 							logFile.logEntryMethod("Feed dollar bills or insert coins", amountFromUser, Vend1000.getUserBalance());

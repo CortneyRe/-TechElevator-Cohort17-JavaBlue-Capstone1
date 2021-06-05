@@ -13,7 +13,7 @@ public class VendingMachine {
 
     public VendingMachine() throws FileNotFoundException {
         Inventory builtInventory = new Inventory();
-        vendingMachineInventory = builtInventory.inventoryInput();
+        vendingMachineInventory = builtInventory.inventoryInput(); //IntelliJ is giving us grief about this needing to be listed as a Map, but it is a Map
 
     }
 
