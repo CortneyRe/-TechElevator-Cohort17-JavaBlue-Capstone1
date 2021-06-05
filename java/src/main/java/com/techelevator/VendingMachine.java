@@ -67,9 +67,9 @@ public class VendingMachine {
                 nickelCounter++;
             }
         }
-        expectedChangeToUser = ( "\n" + quarterCounter + "quarter(s), " + dimeCounter + "dime(s), and " + nickelCounter
-                + "nickel(s) " + "is your change.\n" + "Your balance is now $" + userBalance +
-                "\n ☺☺☺ Happy Snacking☺☺☺");
+        expectedChangeToUser = ( "☺☺☺ Happy Snacking ☺☺☺" + "\n      " + quarterCounter + " quarter(s), " + dimeCounter + " dime(s), and " + nickelCounter
+                + " nickel(s) " + "is your change.\n" + "      Your balance is now $" + userBalance
+                ); //all these random (not random, actually 6) after the new line are so that we get the words centered under "☺☺☺ Happy Snacking ☺☺☺"
 
         return expectedChangeToUser;
     }

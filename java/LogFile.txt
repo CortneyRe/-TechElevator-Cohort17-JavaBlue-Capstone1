@@ -1,0 +1,70 @@
+06/05/21 11:11:32 AM Feed dollar bills or insert coins: $5 5.00
+
+06/05/21 11:11:44 AM Feed dollar bills or insert coins: $10 15.00
+
+06/05/21 11:11:49 AM Feed dollar bills or insert coins: $20 35.00
+
+06/05/21 11:12:21 AM Feed dollar bills or insert coins: $5 5.00
+
+06/05/21 11:12:23 AM Feed dollar bills or insert coins: $10 15.00
+
+06/05/21 11:12:24 AM Feed dollar bills or insert coins: $20 35.00
+
+06/05/21 11:12:56 AM Potato Crisps: $35.00 31.95
+
+06/05/21 11:13:10 AM Triplemint: $31.95 31.20
+
+06/05/21 11:13:43 AM GIVE CHANGE: $31.20 0.00
+
+06/05/21 11:18:10 AM Feed dollar bills or insert coins: $5 5.00
+
+06/05/21 11:18:12 AM Feed dollar bills or insert coins: $10 15.00
+
+06/05/21 11:18:30 AM Potato Crisps: $15.00 11.95
+
+06/05/21 11:19:01 AM Triplemint: $11.95 11.20
+
+06/05/21 11:19:08 AM GIVE CHANGE: $11.20 0.00
+
+06/05/21 11:20:29 AM Feed dollar bills or insert coins: $10 10.00
+
+06/05/21 11:21:22 AM Feed dollar bills or insert coins: $5 15.00
+
+06/05/21 11:22:14 AM Heavy: $15.00 13.50
+
+06/05/21 11:23:08 AM Chiclets: $13.50 12.75
+
+06/05/21 11:23:14 AM GIVE CHANGE: $12.75 0.00
+
+06/05/21 11:24:13 AM GIVE CHANGE: $0.00 0.00
+
+06/05/21 11:25:00 AM GIVE CHANGE: $0.00 0.00
+
+06/05/21 11:25:25 AM GIVE CHANGE: $0.00 0.00
+
+06/05/21 11:25:39 AM GIVE CHANGE: $0.00 0.00
+
+06/05/21 11:27:36 AM Feed dollar bills or insert coins: $10 10.00
+
+06/05/21 11:28:05 AM Potato Crisps: $10.00 6.95
+
+06/05/21 11:28:16 AM Moonpie: $6.95 5.15
+
+06/05/21 11:28:38 AM Heavy: $5.15 3.65
+
+06/05/21 11:28:57 AM Triplemint: $3.65 2.90
+
+06/05/21 11:29:02 AM GIVE CHANGE: $2.90 0.00
+
+06/05/21 11:30:03 AM Feed dollar bills or insert coins: $10 10.00
+
+06/05/21 11:30:15 AM GIVE CHANGE: $10.00 0.00
+
+06/05/21 11:31:06 AM Feed dollar bills or insert coins: $10 10.00
+
+06/05/21 11:31:10 AM GIVE CHANGE: $10.00 0.00
+
+06/05/21 11:31:39 AM Feed dollar bills or insert coins: $10 10.00
+
+06/05/21 11:31:42 AM GIVE CHANGE: $10.00 0.00
+

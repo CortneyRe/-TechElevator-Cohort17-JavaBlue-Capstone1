@@ -50,13 +50,13 @@ public class Menu {
 		String userInput;
 		out.println();
 		out.println("Please enter only (1, 5, 10, 20)");
-		out.print("Please enter an amount, type [done] when finished >>> $");
+		out.print("Please enter an amount, press 0 to begin purchase >>> $");
 		out.flush();
 
 		userInput = in.nextLine();
 		if ((!userInput.toLowerCase().equals("done"))
-				&& (userInput.equals("one") || userInput.equals("five") || userInput.equals("ten")
-				|| userInput.equals("twenty"))) {
+				&& (userInput.equals(acceptedBills.get("one")) || userInput.equals(acceptedBills.get("five")) || userInput.equals(acceptedBills.get("ten"))
+				|| userInput.equals(acceptedBills.get("twenty")))) {
 			try {
 				return new BigDecimal(userInput);
 			} catch (NumberFormatException ex) {

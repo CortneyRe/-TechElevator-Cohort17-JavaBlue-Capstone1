@@ -13,6 +13,6 @@ public class DrinkItem extends Item{
 
     @Override
     public String itemSound() {
-        return "Glug Glug, Yum!";
+        return "      Glug Glug, Yum!";
     }
 }

@@ -13,6 +13,6 @@ public class GumItem extends Item{
 
     @Override
     public String itemSound() {
-        return "Chew Chew, Yum!";
+        return "      Chew Chew, Yum!";
     }
 }
