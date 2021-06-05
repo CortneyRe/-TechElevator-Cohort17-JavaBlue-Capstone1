@@ -28,7 +28,7 @@ public class LogEntry {
             this.action = action;
             this.transactionBalance = transactionalBalance;
             this.machineBalance = machineBalance;
-            writer.println(dateFormat.format(calobj.getTime()) + action + ": $" + transactionBalance + " " +machineBalance + "\n");
+            writer.println(">" + dateFormat.format(calobj.getTime()) + action + ": $" + transactionBalance + " " +machineBalance + "\n");
             writer.flush();
 
         }
