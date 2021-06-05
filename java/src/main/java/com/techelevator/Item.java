@@ -36,6 +36,7 @@ import java.math.BigDecimal;
     public BigDecimal getItemPrice() {
             return itemPrice;
         }
+
     public void setItemPrice(BigDecimal itemPrice) {
          this.itemPrice = itemPrice;
      }

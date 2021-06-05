@@ -21,7 +21,7 @@ public class Inventory {
 
             while (inventory.hasNextLine()) {
                 String line = inventory.nextLine();
-                String splitArray[] = line.split("\\|");
+                String[] splitArray = line.split("\\|");
                 count++;
                 Stack<Item> inventoryStack = new Stack<>();
 
