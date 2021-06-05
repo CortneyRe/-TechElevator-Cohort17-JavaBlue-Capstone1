@@ -68,3 +68,27 @@
 
 06/05/21 11:31:42 AM GIVE CHANGE: $10.00 0.00
 
+06/05/21 11:36:46 AM Feed dollar bills or insert coins: $20 20.00
+
+06/05/21 11:37:06 AM Heavy: $20.00 18.50
+
+06/05/21 11:37:11 AM Heavy: $18.50 17.00
+
+06/05/21 11:37:15 AM Heavy: $17.00 15.50
+
+06/05/21 11:37:29 AM Heavy: $15.50 14.00
+
+06/05/21 11:37:33 AM Heavy: $14.00 12.50
+
+06/05/21 11:38:30 AM Feed dollar bills or insert coins: $1 1.00
+
+>06/05/21 11:55:20 AM Feed dollar bills or insert coins: \ $20 \$20.00
+
+>06/05/21 11:55:30 AM Heavy: \ $20.00 \$18.50
+
+>06/05/21 11:55:35 AM Triplemint: \ $18.50 \$17.75
+
+>06/05/21 11:55:43 AM Mountain Melter: \ $17.75 \$16.25
+
+>06/05/21 11:55:45 AM GIVE CHANGE: \ $16.25 \$0.00
+
