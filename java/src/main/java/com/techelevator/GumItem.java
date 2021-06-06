@@ -12,6 +12,7 @@ public class GumItem extends Item{
     }
 
     @Override
+    //use extra spaces to align on final sale output
     public String itemSound() {
         return "      Chew Chew, Yum!";
     }

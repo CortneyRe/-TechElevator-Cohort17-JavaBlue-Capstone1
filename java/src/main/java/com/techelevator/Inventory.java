@@ -10,11 +10,20 @@ import java.util.TreeMap;
 
 public class Inventory {
 
+    // read thru CSV file to generate base inventory
+    // create a map and stack (first in first out) to generate ordered list of inventory
+    // call on inventory for vending machine class
+
 
     private static Map<String, Stack<Item>> theInventory = new TreeMap<>();
 
 
     public Map inventoryInput () {
+        //each property of an item in CSV inventory is seperated by a "|"
+        // separate each line by seeing wherever a "|" is, turn that into an array of strings with a loop
+        //line.split to separate each property of each line (slot, name, type, price
+        // add inventory to each subclass by checking if line starts with "A", "B", "C", "D"
+
         File inputCSV = new File("vendingmachine.csv");
         int count = 0;
         try (Scanner inventory = new Scanner(inputCSV)) {

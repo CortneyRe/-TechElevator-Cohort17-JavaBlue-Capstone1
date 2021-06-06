@@ -19,7 +19,7 @@ public class VendingMachine {
 
     //
     public Item buyVendingItem(String slotName) throws NotInStockException, LackingFundsException {
-        Item item = null;
+//        Item item = null;
 
         if(vendingMachineInventory.get(slotName).size() > 0) {
             if (userBalance.compareTo(vendingMachineInventory.get(slotName).peek().getItemPrice()) >= 0) {
