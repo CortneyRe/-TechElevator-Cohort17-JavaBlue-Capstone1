@@ -92,3 +92,23 @@
 
 >06/05/21 11:55:45 AM GIVE CHANGE: \ $16.25 \$0.00
 
+>06/06/21 11:49:19 AM Feed dollar bills or insert coins: \$5 \$5.00
+
+>06/06/21 11:50:44 AM GIVE CHANGE: \$5.00 \$0.00
+
+>06/06/21 11:54:52 AM Feed dollar bills or insert coins: $5 $5.00
+>06/06/21 11:55:07 AM Potato Crisps: $5.00 $1.95
+>06/06/21 11:55:13 AM GIVE CHANGE: $1.95 $0.00
+>06/06/21 14:33:57 PM Feed dollar bills or insert coins: $5 $5.00
+>06/06/21 14:34:08 PM Stackers: $5.00 $3.55
+>06/06/21 14:49:48 PM Feed dollar bills or insert coins: $5 $5.00
+>06/06/21 14:49:59 PM Cowtales: $5.00 $3.50
+>06/06/21 14:52:37 PM Feed dollar bills or insert coins: $5 $5.00
+>06/06/21 14:54:35 PM Feed dollar bills or insert coins: $5 $5.00
+>06/06/21 14:55:28 PM Feed dollar bills or insert coins: $5 $5.00
+>06/06/21 14:55:35 PM Stackers: $5.00 $3.55
+>06/06/21 14:55:43 PM Cowtales: $3.55 $2.05
+>06/06/21 14:55:52 PM GIVE CHANGE: $2.05 $0.00
+>06/06/21 17:20:07 PM Feed dollar bills or insert coins: $5 $5.00
+>06/06/21 17:20:33 PM Stackers: $5.00 $3.55
+>06/06/21 17:20:54 PM GIVE CHANGE: $3.55 $0.00

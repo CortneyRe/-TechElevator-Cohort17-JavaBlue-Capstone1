@@ -11,7 +11,9 @@ public class VendingMachineCLI {
 	//
 	private static final String MAIN_MENU_OPTION_DISPLAY_ITEMS = "Display Vending Machine Items";
 	private static final String MAIN_MENU_OPTION_PURCHASE = "Purchase";
-	private static final String[] MAIN_MENU_OPTIONS = { MAIN_MENU_OPTION_DISPLAY_ITEMS, MAIN_MENU_OPTION_PURCHASE };
+	private static final String MAIN_MENU_OPTION_EXIT = "Exit"; // The readME asks for an exit as an option (Wes)
+	//private static final String MAIN_MENU_HIDDEN_SALES_REPORT = "Sales Report";
+	private static final String[] MAIN_MENU_OPTIONS = { MAIN_MENU_OPTION_DISPLAY_ITEMS, MAIN_MENU_OPTION_PURCHASE, MAIN_MENU_OPTION_EXIT};
 
 	private static final String DISPLAY_MENU_OPTION_BILL_FEED = "Feed dollar bills or insert coins" ;
 	private static final String DISPLAY_MENU_OPTION_SELECT_ITEM = "Select item to purchase";
@@ -33,6 +35,7 @@ public class VendingMachineCLI {
 		VendingMachine Vend1000 = new VendingMachine();
 		Purchase userCart = new Purchase();
 		LogEntry logFile = new LogEntry();
+		//SalesReport salesReport = new SalesReport();
 
 		while (true) {
 			String choice = (String) vendingMachineMenu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
@@ -71,6 +74,7 @@ public class VendingMachineCLI {
 						Scanner userInput = new Scanner(System.in);
 						String itemToPurchase = userInput.nextLine();
 						Item boughtItem = null;
+						//Item salesReportItem = null;
 
 						if(Vend1000.getVendingMachineInventory().containsKey(itemToPurchase)) {
 
@@ -80,6 +84,7 @@ public class VendingMachineCLI {
 								userCart.addToCart(boughtItem);
 								System.out.println(boughtItem);
 								logFile.logEntryMethod( boughtItem.getItemName(), moreLogMethod, Vend1000.getUserBalance());
+								//salesReport.salesReportMethod(salesReportItem.getItemName());
 
 							} catch (NotInStockException e) {
 								System.out.println(e.getMessage());
@@ -105,8 +110,10 @@ public class VendingMachineCLI {
 					}
 
 				}
+			} else if (choice.equals(MAIN_MENU_OPTION_EXIT)){       // Exit needs to go here
+				System.exit(0);
 			}
-		}
+	}
 	}
 
 	public static void main(String[] args) throws IOException {

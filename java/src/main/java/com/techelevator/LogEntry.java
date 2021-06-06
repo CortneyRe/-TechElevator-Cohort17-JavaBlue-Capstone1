@@ -28,7 +28,7 @@ public class LogEntry {
             this.action = action;
             this.transactionBalance = transactionalBalance;
             this.machineBalance = machineBalance;
-            writer.println(">" + dateFormat.format(calobj.getTime()) + action + ": \\$" + transactionBalance + " \\$" + machineBalance + "\n"); //doesn't show the amount the user added as $-.--, but instead as $- , which doesn't meet the terms of the README
+            writer.println(">" + dateFormat.format(calobj.getTime()) + action + ": $" + transactionBalance + " $" + machineBalance); //doesn't show the amount the user added as $-.--, but instead as $- , which doesn't meet the terms of the README
             writer.flush();
 
         }
