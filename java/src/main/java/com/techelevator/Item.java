@@ -5,17 +5,20 @@ import java.math.BigDecimal;
 
  abstract class Item {
 
-    //
+    // abstract class, create subclasses for each vending machine item that extend item
+     //assign sound in each subclass instead of in main item class
+
+
     private String itemName;
     private BigDecimal itemPrice;
-     //private String itemType;
+
 
 
      //
     public Item(String itemName, BigDecimal itemPrice) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
-        //this.itemType = itemType;
+
     }
 
 

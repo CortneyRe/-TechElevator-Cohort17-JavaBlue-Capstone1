@@ -78,12 +78,16 @@ public class Menu {
 			int selectedOption = Integer.valueOf(userInput);
 			if (selectedOption > 0 && selectedOption <= options.length) {
 				choice = options[selectedOption - 1];
+//			} else if (selectedOption == 4) {
+//				System.out.println("this worked!");
 			}
 		} catch (NumberFormatException e) {
 			// eat the exception, an error message will be displayed below since choice will
 			// be null
+		} if (Integer.valueOf(userInput) == 4) {
+			System.out.println("This worked");
 		}
-		if (choice == null) {
+		else if (choice == null) {
 			out.println(userInput + " is not a valid option");
 		}
 		return choice;
@@ -93,8 +97,7 @@ public class Menu {
 		out.println();
 		for (int i = 0; i < options.length; i++) {
 			int optionNum = i + 1;
-			out.println(optionNum + ") " + options[i]);
-
+			out.println("(" + optionNum + ") " + options[i]);
 		}
 		out.flush();
 
