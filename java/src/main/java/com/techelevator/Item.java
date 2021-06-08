@@ -3,7 +3,7 @@ package com.techelevator;
 
 import java.math.BigDecimal;
 
- abstract class Item {
+ public abstract class Item {
 
     // abstract class, create subclasses for each vending machine item that extend item
      //assign sound in each subclass instead of in main item class
@@ -20,10 +20,13 @@ import java.math.BigDecimal;
         this.itemPrice = itemPrice;
 
     }
+    public Item(){
+
+    }
 
 
-    //
-//    @Overide //to delete if not used
+
+   // @Override //to delete if not used
     public String toString() {
         return itemName + " >>> " + itemPrice;
     }

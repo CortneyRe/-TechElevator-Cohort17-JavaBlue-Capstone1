@@ -18,8 +18,8 @@ public class Inventory {
     private static Map<String, Stack<Item>> theInventory = new TreeMap<>();
 
 
-    public Map inventoryInput () {
-        //each property of an item in CSV inventory is seperated by a "|"
+    public Map inventoryInput ()  {
+        //each property of an item in CSV inventory is separated by a "|"
         // separate each line by seeing wherever a "|" is, turn that into an array of strings with a loop
         //line.split to separate each property of each line (slot, name, type, price
         // add inventory to each subclass by checking if line starts with "A", "B", "C", "D"

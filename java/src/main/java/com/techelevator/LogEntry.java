@@ -20,13 +20,13 @@ public class LogEntry {
     BigDecimal transactionBalance = null; //we need transactionBalance to show us the money the user added as $-.-- instead of $- with no decimal places on line 31
     BigDecimal machineBalance = null;
 
-    public void logEntryMethod(String action, BigDecimal transactionalBalance, BigDecimal machineBalance) throws IOException {
+    public void logEntryMethod(String action, BigDecimal transactionBalance, BigDecimal machineBalance) throws IOException {
         logFile.createNewFile();
         Calendar calobj = Calendar.getInstance();
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(logFile, true))){
             this.action = action;
-            this.transactionBalance = transactionalBalance;
+            this.transactionBalance = transactionBalance;
             this.machineBalance = machineBalance;
             writer.println(dateFormat.format(calobj.getTime()) + action + ": $" + transactionBalance + " $" + machineBalance); //doesn't show the amount the user added as $-.--, but instead as $- , which doesn't meet the terms of the README
             writer.flush();

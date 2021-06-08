@@ -22,74 +22,75 @@ public class MenuTest {
 	}
 
 	@Test
-	public void displays_a_list_of_menu_options_and_prompts_user_to_make_a_choice() {
+	public void display_menu_and_make_a_choice () {
 		Object[] options = new Object[] { Integer.valueOf(3), "Blind", "Mice" };
 		Menu menu = getMenuForTesting();
 
-		menu.getChoiceFromOptions(options);
+		menu.getChoiceFromOptions(options, "");
 
-		String expected = System.lineSeparator() + "1) " + options[0].toString() + System.lineSeparator() + "2) " + options[1].toString() + System.lineSeparator() + "3) "
-				+ options[2].toString() + System.lineSeparator() + System.lineSeparator() + "Please choose an option >>> ";
+		String expected = System.lineSeparator() + "(1) " + options[0].toString() + System.lineSeparator() + "(2) " + options[1].toString() + System.lineSeparator() + "(3) "
+				+ options[2].toString() + System.lineSeparator() + "Please choose an option ";
+
 		Assert.assertEquals(expected, output.toString());
 	}
 
 	@Test
-	public void returns_object_corresponding_to_user_choice() {
+	public void return_user_choice () {
 		Integer expected = Integer.valueOf(456);
 		Integer[] options = new Integer[] { Integer.valueOf(123), expected, Integer.valueOf(789) };
 		Menu menu = getMenuForTestingWithUserInput("2" + System.lineSeparator());
 
-		Integer result = (Integer) menu.getChoiceFromOptions(options);
+		Integer result = (Integer) menu.getChoiceFromOptions(options, "");
 
 		Assert.assertEquals(expected, result);
 	}
 
 	@Test
-	public void redisplays_menu_if_user_does_not_choose_valid_option() {
+	public void show_menu_if_choice_is_not_valid () {
 		Object[] options = new Object[] { "Larry", "Curly", "Moe" };
-		Menu menu = getMenuForTestingWithUserInput("4" + System.lineSeparator() + "1" + System.lineSeparator());
+		Menu menu = getMenuForTestingWithUserInput("5" + System.lineSeparator() + "1" + System.lineSeparator());
 
-		menu.getChoiceFromOptions(options);
+		menu.getChoiceFromOptions(options, "");
 
-		String menuDisplay = System.lineSeparator() + "1) " + options[0].toString() + System.lineSeparator() + "2) " + options[1].toString() + System.lineSeparator() + "3) "
-				+ options[2].toString() + System.lineSeparator() + System.lineSeparator() + "Please choose an option >>> ";
+		String menuDisplay = System.lineSeparator() + "(1) " + options[0].toString() + System.lineSeparator() + "(2) " + options[1].toString() + System.lineSeparator() + "(3) "
+				+ options[2].toString() + System.lineSeparator() + "Please choose an option ";
 
-		String expected = menuDisplay + System.lineSeparator() + "*** 4 is not a valid option ***" + System.lineSeparator() + System.lineSeparator() + menuDisplay;
+		String expected = menuDisplay + "5 is not a valid option" + System.lineSeparator() + menuDisplay;
 
 		Assert.assertEquals(expected, output.toString());
 	}
 
 	@Test
-	public void redisplays_menu_if_user_chooses_option_less_than_1() {
+	public void show_menu_if_choice_less_than_1_ () {
 		Object[] options = new Object[] { "Larry", "Curly", "Moe" };
 		Menu menu = getMenuForTestingWithUserInput("0" + System.lineSeparator() + "1" + System.lineSeparator());
 
-		menu.getChoiceFromOptions(options);
+		menu.getChoiceFromOptions(options, "");
 
-		String menuDisplay = System.lineSeparator() + "1) " + options[0].toString() + System.lineSeparator() + "2) " + options[1].toString() + System.lineSeparator() + "3) "
-				+ options[2].toString() + System.lineSeparator() + System.lineSeparator() + "Please choose an option >>> ";
+		String menuDisplay = System.lineSeparator() + "(1) " + options[0].toString() + System.lineSeparator() + "(2) " + options[1].toString() + System.lineSeparator() + "(3) "
+				+ options[2].toString() + System.lineSeparator() + "Please choose an option ";
 
-		String expected = menuDisplay + System.lineSeparator() + "*** 0 is not a valid option ***" + System.lineSeparator() + System.lineSeparator() + menuDisplay;
+		String expected = menuDisplay + "0 is not a valid option" + System.lineSeparator() + menuDisplay;
 
 		Assert.assertEquals(expected, output.toString());
 	}
 
 	@Test
-	public void redisplays_menu_if_user_enters_garbage() {
+	public void show_menu_if_input_is_string () {
 		Object[] options = new Object[] { "Larry", "Curly", "Moe" };
 		Menu menu = getMenuForTestingWithUserInput("Mickey Mouse" + System.lineSeparator() + "1" + System.lineSeparator());
 
-		menu.getChoiceFromOptions(options);
+		menu.getChoiceFromOptions(options, "");
 
-		String menuDisplay = System.lineSeparator() + "1) " + options[0].toString() + System.lineSeparator() + "2) " + options[1].toString() + System.lineSeparator() + "3) "
-				+ options[2].toString() + System.lineSeparator() + System.lineSeparator() + "Please choose an option >>> ";
+		String menuDisplay = System.lineSeparator() + "(1) " + options[0].toString() + System.lineSeparator() + "(2) " + options[1].toString() + System.lineSeparator() + "(3) "
+				+ options[2].toString() + System.lineSeparator() + "Please choose an option";
 
-		String expected = menuDisplay + System.lineSeparator() + "*** Mickey Mouse is not a valid option ***" + System.lineSeparator() + System.lineSeparator() + menuDisplay;
+		String expected = menuDisplay + " Mickey Mouse is not a valid option" + System.lineSeparator() + menuDisplay + " ";
 
 		Assert.assertEquals(expected, output.toString());
 	}
 
-	private Menu getMenuForTestingWithUserInput(String userInput) {
+	private Menu getMenuForTestingWithUserInput(String userInput) { // could probably delete
 		ByteArrayInputStream input = new ByteArrayInputStream(String.valueOf(userInput).getBytes());
 		return new Menu(input, output);
 	}

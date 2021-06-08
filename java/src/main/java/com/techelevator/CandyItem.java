@@ -11,10 +11,11 @@ public class CandyItem extends Item{
         super(itemName, itemPrice);
     }
 
+
     @Override
 
     //use extra spaces to align on final sale output
     public String itemSound() {
-        return "      Munch Munch, Yum!";
+        return "Munch Munch, Yum!";
     }
 }
