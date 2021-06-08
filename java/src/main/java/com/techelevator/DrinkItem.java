@@ -15,6 +15,6 @@ public class DrinkItem extends Item{
 
     //use extra spaces to align on final sale output
     public String itemSound() {
-        return "      Glug Glug, Yum!";
+        return "Glug Glug, Yum!";
     }
 }

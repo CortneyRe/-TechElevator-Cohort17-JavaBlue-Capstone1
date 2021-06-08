@@ -11,12 +11,13 @@ public class ChipItem extends Item{
         super(itemName, itemPrice);
     }
 
+
     @Override
 
     //use extra spaces to align on final sale output
     public String itemSound() {
 
-        return "      Crunch Crunch, Yum!";
+        return "Crunch Crunch, Yum!";
     }
 
 

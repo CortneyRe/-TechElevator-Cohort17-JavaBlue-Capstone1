@@ -40,6 +40,7 @@ public class Menu {
 		acceptedBills.put("five", "5");
 		acceptedBills.put("ten", "10");
 		acceptedBills.put("twenty", "20");
+		//acceptedBills.put("zero", "0");
 
 //			String one = "1";
 //			String five = "5";
@@ -54,7 +55,7 @@ public class Menu {
 		out.flush();
 
 		userInput = in.nextLine();
-		if ((!userInput.toLowerCase().equals("done"))
+		if ((!userInput.toLowerCase().equals("0"))
 				&& (userInput.equals(acceptedBills.get("one")) || userInput.equals(acceptedBills.get("five")) || userInput.equals(acceptedBills.get("ten"))
 				|| userInput.equals(acceptedBills.get("twenty")))) {
 			try {
@@ -78,16 +79,15 @@ public class Menu {
 			int selectedOption = Integer.valueOf(userInput);
 			if (selectedOption > 0 && selectedOption <= options.length) {
 				choice = options[selectedOption - 1];
-//			} else if (selectedOption == 4) {
-//				System.out.println("this worked!");
 			}
 		} catch (NumberFormatException e) {
 			// eat the exception, an error message will be displayed below since choice will
 			// be null
-		} if (Integer.valueOf(userInput) == 4) {
-			System.out.println("This worked");
 		}
-		else if (choice == null) {
+//		if (Integer.valueOf(userInput) == 4) {
+//			System.out.println("This worked");
+//		}
+		  if (choice == null) {
 			out.println(userInput + " is not a valid option");
 		}
 		return choice;
