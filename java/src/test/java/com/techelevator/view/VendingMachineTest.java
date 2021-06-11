@@ -2,13 +2,9 @@ package com.techelevator.view;
 
 import static org.junit.Assert.*;
 
-import java.awt.event.ItemEvent;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
-import java.util.Stack;
-
 import com.techelevator.*;
 import org.junit.Assert;
 import org.junit.Before;
@@ -72,9 +68,6 @@ public class VendingMachineTest {
     }
     @Test
     public void testVendingMachinePurchase() {
-//        assertEquals("Your change is: 40 Quarter(s) 0 Dime(s) 0 Nickel(s) \n" + "Your new balance is $"
-//                + new BigDecimal("0.00"), Vend1000.makeChange());
-
         assertEquals("☺☺☺ Happy Snacking ☺☺☺\n" +
                 "40 quarter(s), 0 dime(s), and 0 nickel(s) is your change.\n" +
                 "Your balance is now $0.00", Vend1000.makeChange());
@@ -87,7 +80,7 @@ public class VendingMachineTest {
     }
 
     @Test
-    public void testStackDrop() {
+    public void testDepletedSLot() {
         Vend1000.getVendingMachineInventory().get("A1").pop();
         assertEquals(4, Vend1000.getVendingMachineInventory().get("A1").size());
     }

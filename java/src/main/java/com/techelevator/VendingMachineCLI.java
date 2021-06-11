@@ -8,6 +8,11 @@ import java.util.Scanner;
 
 public class VendingMachineCLI {
 
+	public static void main(String[] args) throws IOException {
+		Menu menu = new Menu(System.in, System.out);
+		VendingMachineCLI cli = new VendingMachineCLI(menu);
+		cli.run();
+	}
 	//
 	private static final String MAIN_MENU_OPTION_DISPLAY_ITEMS = "Display Vending Machine Items";
 	private static final String MAIN_MENU_OPTION_PURCHASE = "Purchase";
@@ -15,7 +20,7 @@ public class VendingMachineCLI {
 	//private static final String MAIN_MENU_HIDDEN_SALES_REPORT = "Sales Report";
 	private static final String[] MAIN_MENU_OPTIONS = { MAIN_MENU_OPTION_DISPLAY_ITEMS, MAIN_MENU_OPTION_PURCHASE, MAIN_MENU_OPTION_EXIT};
 
-	private static final String DISPLAY_MENU_OPTION_BILL_FEED = "Feed dollar bills or insert coins" ;
+	private static final String DISPLAY_MENU_OPTION_BILL_FEED = "Insert money" ;
 	private static final String DISPLAY_MENU_OPTION_SELECT_ITEM = "Select item to purchase";
 	private static final String DISPLAY_MENU_OPTION_END_TRANSACTION = "End transaction";
 	private static final String[] PURCHASE_MENU_OPTIONS = { DISPLAY_MENU_OPTION_BILL_FEED, DISPLAY_MENU_OPTION_SELECT_ITEM, DISPLAY_MENU_OPTION_END_TRANSACTION };
@@ -67,7 +72,7 @@ public class VendingMachineCLI {
 
 							Vend1000.addMoreFunds(amountFromUser);
 							System.out.println("Your balance is: $ " + Vend1000.getUserBalance());
-							logFile.logEntryMethod("Feed dollar bills or insert coins", amountFromUser , Vend1000.getUserBalance());
+							logFile.logEntryMethod("Insert money", amountFromUser , Vend1000.getUserBalance());
 							amountFromUser = vendingMachineMenu.getAmountFromUserInput();
 						}
 					}
@@ -118,9 +123,5 @@ public class VendingMachineCLI {
 	}
 	}
 
-	public static void main(String[] args) throws IOException {
-		Menu menu = new Menu(System.in, System.out);
-		VendingMachineCLI cli = new VendingMachineCLI(menu);
-		cli.run();
-	}
+
 }
