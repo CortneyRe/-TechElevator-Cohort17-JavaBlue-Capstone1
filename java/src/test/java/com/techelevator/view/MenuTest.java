@@ -11,6 +11,16 @@ public class MenuTest {
 
 	private ByteArrayOutputStream output;
 
+	private Menu getMenuForTestingWithUserInput(String userInput) {
+		ByteArrayInputStream input = new ByteArrayInputStream(String.valueOf(userInput).getBytes());
+		return new Menu(input, output);
+	}
+
+	private Menu getMenuForTesting() {
+		return getMenuForTestingWithUserInput("1" + System.lineSeparator());
+	}
+
+
 	@Before
 	public void setup() {
 		output = new ByteArrayOutputStream();
@@ -85,12 +95,5 @@ public class MenuTest {
 		Assert.assertEquals(expected, output.toString());
 	}
 
-	private Menu getMenuForTestingWithUserInput(String userInput) { // could probably delete
-		ByteArrayInputStream input = new ByteArrayInputStream(String.valueOf(userInput).getBytes());
-		return new Menu(input, output);
-	}
 
-	private Menu getMenuForTesting() {
-		return getMenuForTestingWithUserInput("1" + System.lineSeparator());
-	}
 }
