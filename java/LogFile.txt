@@ -1,5 +1,5 @@
-06/05/21 11:11:32 AM Feed dollar bills or insert coins: $5 5.00
 
+<<<<<<< HEAD
 06/05/21 11:11:44 AM Feed dollar bills or insert coins: $10 15.00
 
 06/05/21 11:11:49 AM Feed dollar bills or insert coins: $20 35.00
@@ -177,3 +177,5 @@
 06/07/21 20:28:20 PM Feed dollar bills or insert coins: $5 $5.00
 06/07/21 20:28:31 PM GIVE CHANGE: $5.00 $0.00
 >>>>>>> 3ddb48028794b1849ea08550bf6327d33aa098d2
+=======
+>>>>>>> a4abea8cab9b880284e3dd18b85d7ce9e14c3fe6

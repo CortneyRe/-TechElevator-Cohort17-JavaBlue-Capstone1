@@ -6,12 +6,7 @@ import java.io.ByteArrayOutputStream;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.FixMethodOrder;
-import org.junit.runners.MethodSorters;
 
-import com.techelevator.view.Menu;
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MenuTest {
 
 	private ByteArrayOutputStream output;
@@ -47,7 +42,7 @@ public class MenuTest {
 
 	@Test
 	public void show_menu_if_choice_is_not_valid () {
-		Object[] options = new Object[] { "Larry", "Curly", "Moe" };
+		Object[] options = new Object[] { "Evan", "Wes", "Cortney" };
 		Menu menu = getMenuForTestingWithUserInput("5" + System.lineSeparator() + "1" + System.lineSeparator());
 
 		menu.getChoiceFromOptions(options, "");
@@ -62,7 +57,7 @@ public class MenuTest {
 
 	@Test
 	public void show_menu_if_choice_less_than_1_ () {
-		Object[] options = new Object[] { "Larry", "Curly", "Moe" };
+		Object[] options = new Object[] { "Cortney", "Evan", "Wes" };
 		Menu menu = getMenuForTestingWithUserInput("0" + System.lineSeparator() + "1" + System.lineSeparator());
 
 		menu.getChoiceFromOptions(options, "");
@@ -77,15 +72,15 @@ public class MenuTest {
 
 	@Test
 	public void show_menu_if_input_is_string () {
-		Object[] options = new Object[] { "Larry", "Curly", "Moe" };
-		Menu menu = getMenuForTestingWithUserInput("Mickey Mouse" + System.lineSeparator() + "1" + System.lineSeparator());
+		Object[] options = new Object[] { "Wes", "Evan", "Cortney" };
+		Menu menu = getMenuForTestingWithUserInput("Homer Simpson" + System.lineSeparator() + "1" + System.lineSeparator());
 
 		menu.getChoiceFromOptions(options, "");
 
 		String menuDisplay = System.lineSeparator() + "(1) " + options[0].toString() + System.lineSeparator() + "(2) " + options[1].toString() + System.lineSeparator() + "(3) "
 				+ options[2].toString() + System.lineSeparator() + "Please choose an option";
 
-		String expected = menuDisplay + " Mickey Mouse is not a valid option" + System.lineSeparator() + menuDisplay + " ";
+		String expected = menuDisplay + " Homer Simpson is not a valid option" + System.lineSeparator() + menuDisplay + " ";
 
 		Assert.assertEquals(expected, output.toString());
 	}

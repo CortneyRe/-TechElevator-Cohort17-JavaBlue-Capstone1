@@ -10,7 +10,8 @@ public class Purchase {
 
 
     //
-    public void addToCart ( Item boughtItem) {
+    public void addToCart (Item boughtItem) {
+
         cart.add(boughtItem);
     }
 
