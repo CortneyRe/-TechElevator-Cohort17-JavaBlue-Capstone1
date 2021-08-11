@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class LogEntry {
-   
+
 
 
     File logFile = new File("LogFile.txt");
