@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class LogEntry {
-    //private PrintWriter out; commented this out because I believe we don't need it.
+
 
 
     File logFile = new File("LogFile.txt");
